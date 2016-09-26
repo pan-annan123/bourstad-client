@@ -548,5 +548,5 @@ public class Epsilon extends JPanel {
 	private JTable tablePend;
 	private JLabel portValue;
 	private JLabel rankValue;
-	private String user = "Alice";
+	private String user;
 }
