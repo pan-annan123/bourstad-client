@@ -98,6 +98,7 @@ public abstract class LoginDialog extends JDialog {
 		lblKey.setFont(new Font("Segoe UI Light", Font.PLAIN, 16));
 		
 		keyField = new JTextField();
+		keyField.addActionListener(e -> {onLogin();});
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -215,6 +216,7 @@ public abstract class LoginDialog extends JDialog {
 		new Thread(() -> {
 			textField.setEnabled(false);
 			passwordField.setEnabled(false);
+			keyField.setEnabled(false);
 			bLogin.setEnabled(false);
 			if (!initialized) {
 				synchronized (this) {
